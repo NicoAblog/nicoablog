@@ -1,0 +1,266 @@
+/* =============================
+   GLOBAL STYLES
+============================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* =============================
+   HEADER
+============================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #1a1a1a;
+    border-bottom: 2px solid #0ef;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0ef;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #0ef;
+}
+
+nav .active {
+    color: #0ef;
+    font-weight: bold;
+}
+
+/* =============================
+   HERO SECTION
+============================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px;
+    gap: 30px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    color: #0ef;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    width: 380px;
+}
+
+/* BUTTONS */
+button {
+    background: #0ef;
+    border: none;
+    padding: 14px 28px;
+    color: #000;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #09c;
+}
+
+/* =============================
+   FEATURES SECTION
+============================= */
+.features {
+    padding: 60px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 36px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.feature-box {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    border-color: #0ef;
+}
+
+/* =============================
+   COURSES PAGE
+============================= */
+.courses {
+    padding: 60px;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 36px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.course {
+    padding: 25px;
+    background: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.course:hover {
+    border-color: #0ef;
+}
+
+/* =============================
+   GENERAL PAGE CONTENT
+============================= */
+.page-content {
+    padding: 60px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.page-content h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.page-content h3 {
+    margin-top: 25px;
+    font-size: 24px;
+    color: #0ef;
+}
+
+.page-content ul {
+    margin: 15px 0 20px 20px;
+}
+
+.page-content li {
+    margin-bottom: 8px;
+}
+
+/* =============================
+   CONTACT PAGE
+============================= */
+.contact-info {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* =============================
+   FOOTER
+============================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    border-top: 2px solid #0ef;
+    margin-top: 50px;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 280px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    nav a {
+        margin-left: 12px;
+        font-size: 14px;
+    }
+
+    .feature-grid,
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
